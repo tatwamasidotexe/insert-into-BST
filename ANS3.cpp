@@ -57,8 +57,12 @@ int main(){
 	struct node *root = new node;
 	int a[8] = {12, 2, 56, 82, 22, 5, 45, 9};
 	
-	for(int i = 0; i<8; ++i)
-		root = insertBST(root, a[i]);
+	for(int i = 0; i<8; ++i) {
+		if (i == 0) // root node
+			root->data = a[i];
+		else // child node
+			root = insertBST(root, a[i]);
+	}
 	
 	cout<<"Preorder sequence:\n";
 	printPreorder(root);
