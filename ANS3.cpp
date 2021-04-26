@@ -16,6 +16,7 @@ struct node{
 	}
 };
 
+//function to insert x into the BST
 struct node * insertBST(struct node *root, int x){
 	
 	struct node *temp = new node;
